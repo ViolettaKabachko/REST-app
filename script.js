@@ -1,20 +1,3 @@
-// async function getData(url) {
-//     let response = await fetch(url);
-//     let content = await response.json();
-//     console.log(content)
-//     for (key in content) {
-//         console.log(key, typeof(key))
-//         console.log(content[key])
-//     }    
-//     return content
-    
-    
-    
-// }
-
-
-
-
 addEventListener('DOMContentLoaded', () => {
 
     const sendData = async (url, data) => {       
@@ -51,55 +34,3 @@ addEventListener('DOMContentLoaded', () => {
         
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// addEventListener('DOMContentLoaded', (event) => {
-
-//     async function loadSmth() {
-//         let xhr = new XMLHttpRequest()
-//         xhr.open("GET", "http://127.0.0.1:5000", false)
-//         xhr.send()
-//         xhr.onload = () => {
-//             if (xhr.status != 200) { 
-//                 alert(`Ошибка ${xhr.status}: ${xhr.statusText}`)
-//               } else { 
-//                 const content = xhr.response
-//                 alert(content)
-//                 return content
-//               }
-//         }
-//     }
-
-//     document.querySelector(".btn").addEventListener("click", function () {
-//         const formKey = document.querySelector(".request").value
-//         const value = loadSmth()
-//         console.log(value)
-        
-//         const content = value[formKey]
-//         const el = document.createElement("p");
-//         const body = document.body;
-//         el.textContent = content
-//         body.appendChild(el);
-    
-//     })
-
-// });
