@@ -46,15 +46,16 @@ def index():
     if request.method == 'POST':
         chosen = request.data.decode('utf-8')
         responses.append(chosen)
-        res = parse(sites[chosen][0], sites[chosen][1], sites[chosen][2])
+        res = parse(sites[chosen][0], sites[chosen][1], advanced_text=sites[chosen][2])
         print(res)
         return jsonify({'res': res})
 
+# Переосмысленный момент
 
-@app.route('/', methods=['GET'])
-def send():
-    if request.method == 'GET':
-        return jsonify({'res': res})
+# @app.route('/', methods=['GET'])
+# def send():
+#     if request.method == 'GET':
+#         return jsonify({'res': res})
 
 
 if __name__ == '__main__':
